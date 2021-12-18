@@ -1,5 +1,6 @@
 import React from "react";
 import {useLoader} from '@react-three/fiber';
+import { OrbitControls } from "@react-three/drei";
 
 import GlowDot from '../.././assests/textures/glow_dot.jpg';
 import Gradiant from '../.././assests/textures/gradiant.jpg';
@@ -24,7 +25,15 @@ export function Ball(props) {
          <mesh>
           <sphereGeometry args={[1, 32, 32]}/>
           <meshPhongMaterial colorBall={colorBall} />
-          <meshStandardMaterial map={plusBall} />
+          <meshStandardMaterial map={toyBall} />
+          <OrbitControls
+           enableZoom={true}
+           enablePan={true}
+           enableRotate={true}
+           zoomSpeed={0.6}
+           panSpeed={0.5}
+           rotateSpeed={0.4}
+           />
          </mesh>
       </>
    );
