@@ -22,10 +22,12 @@ export function Ball(props) {
    return (
       <>
          <ambientLight intensity ={.5}  />
+
+
          <mesh>
           <sphereGeometry args={[1, 32, 32]}/>
           <meshPhongMaterial colorBall={colorBall} />
-          <meshStandardMaterial map={toyBall} />
+          <meshStandardMaterial map={colorBall} />
           <OrbitControls
            enableZoom={true}
            enablePan={true}
@@ -34,7 +36,9 @@ export function Ball(props) {
            panSpeed={0.5}
            rotateSpeed={0.4}
            />
+         
          </mesh>
       </>
    );
+   
 }

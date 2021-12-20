@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import {Canvas} from '@react-three/fiber'
 import { Suspense } from 'react';
 import { Ball } from './components/ball';
+import { Table } from './components/table';
 const CanvasContainer = styled.div`
   width: 100%;
   height: 100%;
@@ -15,6 +16,7 @@ function App() {
       <Canvas>
         <Suspense fallback={null}>
             <Ball/>
+            <Table />
         </Suspense>
       </Canvas>
     </CanvasContainer>
