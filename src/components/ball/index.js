@@ -27,7 +27,7 @@ export function Ball(props) {
          <mesh>
           <sphereGeometry args={[1, 32, 32]}/>
           <meshPhongMaterial colorBall={colorBall} />
-          <meshStandardMaterial map={colorBall} />
+          <meshStandardMaterial map={toyBall} />
           <OrbitControls
            enableZoom={true}
            enablePan={true}
